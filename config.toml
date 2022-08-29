@@ -15,7 +15,7 @@ enableEmoji = true
 author = "Colin Brust"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Colin Brust's personal website"
-keywords = ""
+keywords = "test"
 info = ["Python", "Docker", "R"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
