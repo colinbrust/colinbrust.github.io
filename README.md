@@ -1,39 +1,53 @@
-## Welcome to GitHub Pages
+<p align="center">
+  <p align="center">
+    <a href="https://themes.gohugo.io/hugo-coder/">
+      <img src="https://img.shields.io/badge/theme-hugo--coder-2b8cbe" alt="Hugo Theme Badge"">
+    </a>
+    <a href="https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.txt">
+      <img src="https://img.shields.io/github/license/luizdepra/hugo-coder.svg" alt="MIT License Badge">
+    </a>
+  </p>
 
-You can use the [editor on GitHub](https://github.com/colinbrust/colinbrust.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files. TEST.
+  <p align="center">
+    <a href="https://github.com/luizdepra/hugo-coder">
+      <img src="images/logos/logotype-a.png" alt="Hugo Coder Logo" width="600px" height="184px">
+    </a>
+  </p>
+</p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A simple and clean blog theme for [Hugo](https://gohugo.io/).
 
-### Markdown
+![](images/screenshot.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Live Demo
 
-```markdown
-Syntax highlighted code block
+See [here](https://hugo-coder.netlify.app/).
 
-# Header 1
-## Header 2
-### Header 3
+## Quick Start
 
-- Bulleted
-- List
+1. Add the repository into your Hugo Project repository as a submodule, `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
+2. Configure your `config.toml`. You can either use [this minimal configuration](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md#complete-example) as a base, or look for a complete explanation about all configurations [here](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md). The [`config.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/config.toml) inside the [`exampleSite`](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) is also a good reference.
+3. Build your site with `hugo server` and see the result at `http://localhost:1313/`.
 
-1. Numbered
-2. List
+## Documentation
 
-**Bold** and _Italic_ and `Code` text
+See the [`docs`](docs/home.md) folder.
 
-[Link](url) and ![Image](src)
-```
+## License
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Coder is licensed under the [MIT license](https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md).
 
-### Jekyll Themes
+## Maintenance
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/colinbrust/colinbrust.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+This theme is maintained by its author [Luiz de Prá](https://github.com/luizdepra) with the help from these awesome [contributors](CONTRIBUTORS.md).
 
-### Support or Contact
+## Sponsoring
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you like my project or it was useful for you, consider supporting its development. Just:
 
-This is a test.
+<a href="https://www.buymeacoffee.com/luizdepra" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
+## Special Thanks
+
+-   Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
+-   All contributors, for every PR and Issue reported.
