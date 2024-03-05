@@ -1,0 +1,23 @@
+---
+about:
+  template: jolla
+  id: about-block
+  image: "img/my_image.jpg"
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/colinbrust/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/colin-brust/
+    - icon: envelope
+      text: Email
+      href: "mailto:colin.brust@gmail.com"  
+---
+
+::: {#about-block}
+:::
+
+My name is Colin Brust and I'm a data specialist at the [Montana Climate Office](https://climate.umt.edu/) in Missoula, Montana. My work includes improving and developing our [API](https://mesonet.climate.umt.edu/api/docs/) and [dashboard](https://mesonet.climate.umt.edu/dash/) to make climate and weather data easily accessible across Montana. In my free time, I enjoy rock climbing and trail running in the mountains around Missoula. 
+
+

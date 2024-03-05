@@ -1,19 +1,13 @@
-# SvelteKit Blog Template
+# Quarto Template for the Tutorial
 
-A SvelteKit blog template built on mdsvex and Tailwind.
+This repository contains the template for the website tutorial at <https://www.marvinschmitt.com/blog/website-tutorial-quarto/>.
 
-[Demo](https://sveltekit-blog-template.vercel.app)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmattjennings%2Fsveltekit-blog-template)
-
-# Credits
-
-- [pngwn](https://github.com/pngwn) for mdsvex and helping me with the `mdsvex-relative-images` plugin
-  - https://github.com/pngwn/MDsveX/discussions/246#discussioncomment-720947
-- Tailwind's ["Spotlight" blog template](https://spotlight.tailwindui.com/)
-  - Overall theme is heavily based on this template
-- All who have contributed!
-
-  <a href="https://github.com/mattjennings/sveltekit-blog-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mattjennings/sveltekit-blog-template" />
-  </a>
+<p align="center">
+  <img src="img/website_template_screenshot_1.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="img/website_template_screenshot_2.png" width="45%">
+<br/><br/>
+  <img src="img/website_template_screenshot_3.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="img/website_template_screenshot_4.png" width="45%">
+</p>
