@@ -18,6 +18,8 @@ about:
 ::: {#about-block}
 :::
 
-My name is Colin Brust and I'm a data specialist at the [Montana Climate Office](https://climate.umt.edu/) in Missoula, Montana. My work includes improving and developing our [API](https://mesonet.climate.umt.edu/api/docs/) and [dashboard](https://mesonet.climate.umt.edu/dash/) to make climate and weather data easily accessible across Montana. In my free time, I enjoy rock climbing and trail running in the mountains around Missoula. 
+My name is Colin Brust and I'm a data specialist at the [Montana Climate Office](https://climate.umt.edu/) in Missoula, Montana. My work includes improving and developing our [API](https://mesonet.climate.umt.edu/api/docs/) and [dashboard](https://mesonet.climate.umt.edu/dash/) to make climate and weather data easily accessible across Montana. I prefer using Python and R for most of my projects, but am working on branching out! 
+
+In my free time, I enjoy rock climbing and trail running in the mountains around Montana. I'm just using this website as a place to put random ideas regarding code, research and outdoor recreation! 
 
 

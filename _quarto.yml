@@ -15,12 +15,12 @@ website:
     
     # your sub-pages
     left:
-      - text: "Projects"
-        href: projects/index.qmd
-      - text: "Projects"
-        href: projects/index.qmd
-      - text: "Posts"
-        href: posts/index.qmd
+      # - text: "Projects"
+      #   href: projects/index.qmd
+      - text: "Research"
+        href: research/index.qmd
+      # - text: "Posts"
+      #   href: posts/index.qmd
       - text: "Resume"
         href: cv/index.qmd
     
@@ -30,9 +30,9 @@ website:
         href: https://github.com/colinbrust/
       - icon: linkedin
         href: https://www.linkedin.com/in/colin-brust/
-      - icon: envelope
-        aria-label: email
-        href: "mailto:colin.brust@gmail.com"  
+      # - icon: envelope
+      #   aria-label: email
+      #   href: "mailto:colin.brust@gmail.com"  
   
   
 
@@ -43,10 +43,8 @@ website:
   page-footer: 
     left: |
       <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
-    center: |
-      <span class="faux-block"><a href="https://www.marvinschmitt.com/blog/website-tutorial-quarto/">View the tutorial for this template!</a></span>
     right: |
-      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View source on GitHub</a></span>
+      <span class="faux-block"><a href="https://github.com/marvinschmitt/quarto-website-template/">View template source on GitHub</a></span>
 
 project:
   type: website

@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Manuscript Link\n\n\nDrought is one of the most ecologically and economically devastating natural phenomena affecting the United States, causing the U.S. economy billions of dollars in damage, and driving widespread degradation of ecosystem health. Many drought indices are implemented to monitor the current extent and status of drought so stakeholders such as farmers and local governments can appropriately respond. Methods to forecast drought conditions weeks to months in advance are less common but would provide a more effective early warning system to enhance drought response, mitigation, and adaptation planning. To resolve this issue, we introduce DroughtCast, a machine learning framework for forecasting the United States Drought Monitor (USDM). DroughtCast operates on the knowledge that recent anomalies in hydrology and meteorology drive future changes in drought conditions. We use simulated meteorology and satellite observed soil moisture as inputs into a recurrent neural network to accurately forecast the USDM between 1 and 12 weeks into the future. Our analysis shows that precipitation, soil moisture, and temperature are the most important input variables when forecasting future drought conditions. Additionally, a case study of the 2017 Northern Plains Flash Drought shows that DroughtCast was able to forecast a very extreme drought event up to 12 weeks before its onset. Given the favorable forecasting skill of the model, DroughtCast may provide a promising tool for land managers and local governments in preparing for and mitigating the effects of drought."
+  },
+  {
+    "objectID": "research/index.html#droughtcast-a-machine-learning-forecast-of-the-united-states-drought-monitor",
+    "href": "research/index.html#droughtcast-a-machine-learning-forecast-of-the-united-states-drought-monitor",
+    "title": "Research",
+    "section": "",
+    "text": "Manuscript Link\n\n\nDrought is one of the most ecologically and economically devastating natural phenomena affecting the United States, causing the U.S. economy billions of dollars in damage, and driving widespread degradation of ecosystem health. Many drought indices are implemented to monitor the current extent and status of drought so stakeholders such as farmers and local governments can appropriately respond. Methods to forecast drought conditions weeks to months in advance are less common but would provide a more effective early warning system to enhance drought response, mitigation, and adaptation planning. To resolve this issue, we introduce DroughtCast, a machine learning framework for forecasting the United States Drought Monitor (USDM). DroughtCast operates on the knowledge that recent anomalies in hydrology and meteorology drive future changes in drought conditions. We use simulated meteorology and satellite observed soil moisture as inputs into a recurrent neural network to accurately forecast the USDM between 1 and 12 weeks into the future. Our analysis shows that precipitation, soil moisture, and temperature are the most important input variables when forecasting future drought conditions. Additionally, a case study of the 2017 Northern Plains Flash Drought shows that DroughtCast was able to forecast a very extreme drought event up to 12 weeks before its onset. Given the favorable forecasting skill of the model, DroughtCast may provide a promising tool for land managers and local governments in preparing for and mitigating the effects of drought."
+  },
+  {
+    "objectID": "research/index.html#using-smap-level-4-soil-moisture-to-constrain-mod16-evapotranspiration-over-the-contiguous-usa",
+    "href": "research/index.html#using-smap-level-4-soil-moisture-to-constrain-mod16-evapotranspiration-over-the-contiguous-usa",
+    "title": "Research",
+    "section": "Using SMAP Level-4 soil moisture to constrain MOD16 evapotranspiration over the contiguous USA",
+    "text": "Using SMAP Level-4 soil moisture to constrain MOD16 evapotranspiration over the contiguous USA\n\nColin Brust, John S. Kimball, Marco P. Maneta, Kelsey Jencso, Mingzhu He, Rolf H. Reichle\n\nManuscript Link | Request Manuscript\n\nAbstract\nEvapotranspiration (ET) is a key hydrologic variable linking the Earth’s water, carbon and energy cycles. At large spatial scales, remote sensing-based (RS) models are often used to quantify ET. Despite the large number of RS ET models available, few include soil moisture as a key environmental input, which can degrade model accuracy and utility. Here, we use model assimilation enhanced soil moisture estimates from the NASA SMAP (Soil Moisture Active Passive) mission as a water supply control in the MOD16 ET algorithm framework. SMAP-derived daily surface (0-5 cm depth) and root zone (0-1 m depth) soil moisture are used with MODIS (Moderate Resolution Imaging Spectroradiometer) vegetation observations, and 4 km gridded regional surface meteorology (Gridmet) as primary inputs for estimating daily ET and underlying model soil and stomatal conductance terms. We calibrated the model environmental response parameters using tower eddy covariance ET observations representing major North American biomes. The model ET results were validated using a holdout set of tower observations spanning a large regional climate gradient. The updated ET estimates outperform the baseline MOD16 product across all tower validation sites (RMSE = 0.758 vs 1.108 mm/day ; R2 = 0.68 vs 0.45, respectively). Smaller relative improvements were obtained using a recalibrated model with 4 km Gridmet meteorology, but no soil moisture control (RMSE = 0.813 mm/day ; R2 = 0.66), indicating that these changes are essential for the improved model performance. The soil moisture-constrained model improvements and relative benefits from the SMAP observations are greater in arid climates, consistent with stronger soil moisture control on ET in water-limited regions. The use of SMAP soil moisture as an additional model constraint improves MOD16 regional performance and provides a new framework for investigating both soil and atmosphere controls on ET."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Photography",
+    "section": "",
+    "text": "As a wizard and scholar of Middle-earth, I have been studying the magic of the natural world for centuries. Through my self-portraits, I aim to capture the essence of my own being and reflect on my own journey through time. Each photograph is a reflection of my own experiences and emotions. Through my photography, I hope to offer a glimpse into my life as a scholar and adventurer, and inspire others to reflect on their own journeys through the world.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView the tutorial for this template (+ download link)"
+  },
+  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Projects",
@@ -21,18 +49,11 @@
     "text": "The History of the War of the Ring\n\narXiv Preprint | Code\nI am creating a comprehensive and detailed history of the conflict that goes beyond the surface-level events. By gathering information from a variety of sources, including my own memories, written accounts, and oral histories, I hope to shed new light on this important period in Middle-earth’s history and provide valuable insights into the motivations and actions of the various players involved.\n\nView the tutorial for this template (+ download link)"
   },
   {
-    "objectID": "photography/index.html",
-    "href": "photography/index.html",
-    "title": "Photography",
-    "section": "",
-    "text": "As a wizard and scholar of Middle-earth, I have been studying the magic of the natural world for centuries. Through my self-portraits, I aim to capture the essence of my own being and reflect on my own journey through time. Each photograph is a reflection of my own experiences and emotions. Through my photography, I hope to offer a glimpse into my life as a scholar and adventurer, and inspire others to reflect on their own journeys through the world.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView the tutorial for this template (+ download link)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Colin Brust",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n\n\n\nMy name is Colin Brust and I’m a data specialist at the Montana Climate Office in Missoula, Montana. My work includes improving and developing our API and dashboard to make climate and weather data easily accessible across Montana. In my free time, I enjoy rock climbing and trail running in the mountains around Missoula."
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n\n\n\nMy name is Colin Brust and I’m a data specialist at the Montana Climate Office in Missoula, Montana. My work includes improving and developing our API and dashboard to make climate and weather data easily accessible across Montana. I prefer using Python and R for most of my projects, but am working on branching out!\nIn my free time, I enjoy rock climbing and trail running in the mountains around Montana. I’m just using this website as a place to put random ideas regarding code, research and outdoor recreation!"
   },
   {
     "objectID": "cv/index.html",
