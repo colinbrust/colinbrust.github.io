@@ -5,25 +5,27 @@ website:
   title: "Colin Brust"                                # Your name
   description: ""   # A brief slogan (optional)
   image: img/my_image.jpg
-  
+
   favicon: img/favicon.png
-  
+
   # start of the navigation bar at the top of the website
   navbar:
     pinned: true
     logo: /img/favicon.png
-    
+
     # your sub-pages
     left:
       # - text: "Projects"
       #   href: projects/index.qmd
       - text: "Research"
         href: research/index.qmd
-      # - text: "Posts"
-      #   href: posts/index.qmd
       - text: "Resume"
         href: cv/index.qmd
-    
+      - text: "Van Life"
+        href: vanlife/index.qmd
+      - text: "Posts"
+        href: posts/index.qmd
+
     # your social media handles
     right:
       - icon: github
@@ -32,15 +34,15 @@ website:
         href: https://www.linkedin.com/in/colin-brust/
       # - icon: envelope
       #   aria-label: email
-      #   href: "mailto:colin.brust@gmail.com"  
-  
-  
+      #   href: "mailto:colin.brust@gmail.com"
+
+
 
 # Don't touch unless you know what you are doing :) ------------
-  search: 
+  search:
     location: navbar
     type: textbox
-  page-footer: 
+  page-footer:
     left: |
       <span class="faux-block">&#169; 2023 Marvin Schmitt CC BY-SA 4.0</span>
     right: |
@@ -50,7 +52,7 @@ project:
   type: website
   output-dir: docs
 
-  preview: 
+  preview:
     port: 22222
     browser: true
     watch-inputs: true
@@ -62,7 +64,7 @@ execute:
 format:
   html:
     fontsize: 1.1em
-    theme: 
+    theme:
       - pulse
       - html/styles.scss
     toc: false

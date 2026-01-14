@@ -1,0 +1,86 @@
+---
+title: "Road Trip Map"
+format: html
+---
+
+```{r setup, include=FALSE}
+library(magrittr)
+```
+
+```{r data}
+locations <- tibble::tribble(
+  ~location,                        ~date_start,   ~date_end,     ~summary,                                                                  ~link,
+  "Missoula, MT",                   "2014-08-01",  "2025-11-01",  "Helen flew to Texas to visit family and I celebrated Halloween with my friends for my last night in Missoula. I said my goodbyes and then hit the road for Utah.", NA,
+  "Goodenough Creek Campground, ID","2025-11-01",  "2025-11-02",  "Maya and I stopped for the night on the way to Utah. Watched 'The House on Haunted Hill' while we cooked dinner. Helen isn't a big fan of old movies so I'm making to sure to get my fill in the coming days.",                     NA,
+  "Apple Valley, UT",               "2025-11-02",  "2025-11-05",  "Eventually made it to the Gooseberry Mesa in southern Utah. On the day I arrived I was able to get in a nice quick mountain bike ride before the sun set. Spent 3 days here at a nice camp site with good access to the bike trails. Split my time between working, running, biking, and watching movies once the sun went down. I got my fill of movies in, watching The Apartment, The Thing, and finishing the Lonesome Dove series. The only downside was that as a novice vanlifer, I chose a camping spot in the shade. This meant our battery system didn't recharge and I lost power on the night of my stay. From Maya's perspective, the downsides were that A) Helen wasn't there () and B) I took here on a big bike ride or run every day (exercising is hard).",             NA,
+  "Las Vegas, NV",                  "2025-11-06",  "2025-11-11",  "A group of Helen's friends booked an AirBnB in Las Vegas for their birthday, so we set up our van in their driveway and joined them. I have been to Las Vegas a number of times but I was either a little kid, or camped out at Red Rocks on a climbing trip. Neither Helen nor I had visited the city itself in our adult lives. Despite it not being our usual scene, we both had a blast. We walked along Fremont Street and the Strip, played Top Golf, got all-you-can-eat sushi, and visited Meow Wolf!",                         NA,
+  "Boulder City, NV",               "2025-11-11",  "2025-11-13",  "On our way out of Vegas, we stopped outside Boulder City for a few nights. The first night, we were camped 'on' Lake Mead at the Boulder City Beach campground. You might think that because the campsite was called the Boulder City BEACH Campground that the sites would be right on the water's edge, but you would be wrong. For that to be true, my guess is that you would have to find a time machine and set the year to 2000, which is the last time Lake Mead was at [full capacity](https://www.usbr.gov/lc/region/g4000/lakemead_line.pdf). Since then, the water levels have fallen almost 200 feet. All that is to say, rather than being camped on the beach, Helen and I had to walk 20 minutes to dip our toes in the water. After our walk to the water, we rode the mountain bike trails Bootleg Canyon",          NA,
+  "Burro Creek Campground, AZ",     "2025-11-13",  "2025-11-14",  "Discovered desert charm and authentic Western atmosphere.",              NA,
+  "Tucson, AZ",                     "2025-11-14",  "2025-11-24",  "Enjoyed Saguaro National Park and amazing Mexican food.",                NA,
+  "Molino Basin Campground, AZ",    "2025-11-24",  "2025-11-26",  "Escaped the heat in this mountain village near Tucson.",                 NA,
+  "Tucson, AZ",                     "2025-11-26",  "2025-12-06",  "",                                                                       NA,
+  "17975 Peralta Rd, Gold Canyon, AZ", "2025-12-06",  "2025-12-07",  "Small desert town exploration and local culture.",                    NA,
+  "Peoria, AZ",                     "2025-12-07",  "2025-12-09",  "Suburban Phoenix stop with hiking in nearby mountains.",                 NA,
+  "Sedona, AZ",                     "2025-12-09",  "2025-12-11",  "Mesmerized by red rock formations and vortex energy.",                   NA,
+  "Flagstaff, AZ",                  "2025-12-11",  "2025-12-12",  "Perfect mountain town with Route 66 history and stargazing.",            NA,
+  "Durango, CO",                    "2025-12-12",  "2025-12-28",  "Explored historic downtown and rode the Durango & Silverton Railroad.",  NA,
+  "Page, AZ",                       "2025-12-28",  "2025-12-29",  "Stood in awe at Horseshoe Bend and Antelope Canyon.",                    NA,
+  "Las Vegas, NV",                  "2025-12-29",  "2026-01-03",  "Second Vegas visit for shows and more exploration.",                     NA,
+  "Mojave National Preserve",       "2026-01-03",  "2026-01-04", "", NA,
+  "Joshua Tree National Park, CA",  "2026-01-04",  "2026-01-07",  "Hiked among otherworldly rock formations and Joshua trees.",             NA,
+  "Borrego Springs, CA",            "2026-01-07",  "2026-01-09",  "Relaxed in this desert oasis with wildflowers and hot springs.",         NA,
+  "Julian, CA",                     "2026-01-09",  "2026-01-10",  "Charming mountain town famous for apple pie and mining history.",        NA,
+  "Dulzura, CA",                    "2026-01-10",  "2026-01-11",  "Quiet border town with scenic drives and local history.",                NA,
+  "Encinitas, CA",                  "2026-01-11",  "2026-01-13",  "Final destination! Beach time, surfing, and coastal relaxation.",        NA,
+  "Taza Creek Orchard, CA", "2026-01-13", "2026-01-14", "", NA
+)
+```
+
+```{r geocode}
+parse_location <- function(loc) {
+  if (grepl("^-?\\d+\\.\\d+,\\s*-?\\d+\\.\\d+$", loc)) {
+    coords <- as.numeric(strsplit(gsub(" ", "", loc), ",")[[1]])
+    return(data.frame(lat = coords[1], long = coords[2]))
+  } else {
+    return(tidygeocoder::geo(loc, method = "osm"))
+  }
+}
+
+coords <- purrr::map(locations$location, parse_location) %>%
+  dplyr::bind_rows() %>%
+  dplyr::bind_cols(locations) %>%
+  dplyr::mutate(order = dplyr::row_number())
+```
+
+```{r create-popup}
+# Create HTML popup content
+coords$popup_content <- purrr::pmap_chr(
+  list(coords$location, coords$summary, coords$link, coords$order),
+  function(loc, summ, lnk, ord) {
+    popup <- sprintf(
+      "<b>Stop %d: %s</b><br><br>%s",
+      ord, loc, summ
+    )
+    if (!is.na(lnk)) {
+      popup <- paste0(popup, sprintf("<br><br><a href='%s' target='_blank'>Read full post →</a>", lnk))
+    }
+    return(popup)
+  }
+)
+```
+
+```{r map}
+# Convert to sf object
+coords_sf <- sf::st_as_sf(coords, coords = c("long", "lat"), crs = 4326)
+
+# Create line between points
+line_sf <- sf::st_sf(
+  geometry = sf::st_sfc(sf::st_linestring(as.matrix(coords[, c("long", "lat")])), crs = 4326)
+)
+
+# Create interactive map with custom popups
+mapview::mapview(line_sf, layer.name = "Route", color = "blue", lwd = 2) +
+  mapview::mapview(coords_sf, zcol = "order", layer.name = "Stops", 
+                   col.regions = viridisLite::viridis(nrow(coords)),
+                   popup = leafpop::popupHTML(coords$popup_content))
+```
